@@ -1,8 +1,16 @@
-import React from 'react'
+import Titulo from "../Titulo";
 
 export default function Aluno() {
 
-    const titulo = 'Alunos';
+/*     const [alunos, setAlunos] = useState([
+        { nome: 'Marta' },
+        { nome: 'Paula' },
+        { nome: 'Laura' },
+        { nome: 'Luiza' },
+        { nome: 'Lucas' },
+        { nome: 'Pedro' },
+        { nome: 'Paulo' },
+    ]); */
 
     const alunos = [
         { nome: 'Marta' },
@@ -14,10 +22,12 @@ export default function Aluno() {
         { nome: 'Paulo' },
     ]
 
+    const titulo = 'Alunos';
+
     return (
         <div>
             <h1>
-                {titulo}
+                <Titulo/>
             </h1>
             <ul>
                 {alunos.map((aluno) => {

@@ -1,14 +1,15 @@
 import './App.css';
-import Aluno from './components/Aluno';
-import Professor from './components/Professor';
+import Nav from './components/Nav';
+import Routes from './routes'
 
-function App() {
+export default function App() {
   return (
     <div>
-      <Aluno />
-      <Professor/>
+      <Nav />
+      <div className="container">
+        <Routes />
+      </div>
+
     </div>
   );
-}
-
-export default App;
+};
