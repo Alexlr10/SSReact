@@ -1,7 +1,8 @@
 import React from 'react'
+import Titulo from '../Titulo';
 
-export default function Professor(){
-   
+export default function Professor() {
+
     const titulo = 'Professores';
 
     const professores = [
@@ -15,7 +16,7 @@ export default function Professor(){
     return (
         <div>
             <h1>
-                {titulo}
+                <Titulo Titulo={titulo} />
             </h1>
             <ul>
                 {professores.map((prof) => {

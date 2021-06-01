@@ -27,7 +27,7 @@ export default function Aluno() {
     return (
         <div>
             <h1>
-                <Titulo/>
+                <Titulo Titulo={titulo}/>
             </h1>
             <ul>
                 {alunos.map((aluno) => {

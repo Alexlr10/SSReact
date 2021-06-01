@@ -1,10 +1,9 @@
-export default function Titulo(){
+export default function Titulo(props){
     
-    const titulo = 'titulo';
-    
+   
     return (
         <div>
-            {titulo}
+            {props.Titulo}
         </div>
     );
 }
