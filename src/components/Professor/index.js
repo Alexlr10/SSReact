@@ -6,11 +6,12 @@ export default function Professor() {
     const titulo = 'Professores';
 
     const professores = [
-        { nome: 'Lauro' },
-        { nome: 'Roberto' },
-        { nome: 'Ronaldo' },
-        { nome: 'Rodrigo' },
-        { nome: 'Alexandre' },
+        { id: 1, nome: 'Lauro', disciplina: 'Matematica' },
+        { id: 2, nome: 'Roberto', disciplina: 'Fisica' },
+        { id: 3, nome: 'Ronaldo', disciplina: 'Portugues' },
+        { id: 4, nome: 'Rodrigo', disciplina: 'Ingles' },
+        { id: 5, nome: 'Alexandre', disciplina: 'Programação' },
+
     ]
 
     return (
@@ -18,13 +19,33 @@ export default function Professor() {
             <h1>
                 <Titulo Titulo={titulo} />
             </h1>
-            <ul>
+           
+            <table class="table">
+                <thead class="table-light">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Disciplina</th>
+
+                    </tr>
+                </thead>
+
                 {professores.map((prof) => {
                     return (
-                        <li key={prof.nome}>{prof.nome}</li>
-                    );
+
+                        <tbody>
+                            <tr>
+                                <th scope="row">{prof.id}</th>
+                                <td>{prof.nome}</td>
+                                <td>{prof.disciplina}</td>
+
+                            </tr>
+                        </tbody>
+
+                    )
                 })}
-            </ul>
+
+            </table>
         </div>
 
 
